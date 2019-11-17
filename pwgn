@@ -1,0 +1,16 @@
+import random
+import string
+
+def pwgn(n):
+    s = "abcdefghijklmnopqrstuvwxyz!@£$%^"
+    n = "1234567890"
+    passlen = 0
+    n = str((input("How strong: ")))
+    passlen = 0
+    if(n.lower() == "strong"):
+        passlen = random.randrange(1,15)
+    pw = "".join(random.sample(s+n, passlen))
+    print(pw)
+
+pwgn(n)
+    
